@@ -49,9 +49,6 @@ async function main() {
         return;
     }
 
-    // shape.setTextColor(answers.textColor);
-    // shape.setShapeColor(answers.shapeColor);
-
     const newLogo = new Logo();
     newLogo.setText(answers.text);
     newLogo.setTextColor(answers.textColor);
@@ -62,7 +59,8 @@ async function main() {
     console.log(shape);
 
     // Generate the SVG content
-    const svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shape.render()}</svg>`;
+    // const svgContent = newLogo.generateSVG();
+     const svgContent = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">${shape.render()}</svg>`;
 
     // Write the SVG content to the file
     fs.writeFileSync("logo.svg", svgContent);
