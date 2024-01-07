@@ -1,8 +1,6 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-const { Triangle, Circle, Square, Logo } = require('./lib/logo.js');
-
-
+const fs = require("fs");
+const inquirer = require("inquirer");
+const { Triangle, Circle, Square, Logo } = require("./lib/logo.js");
 
 async function main() {
   try {
@@ -21,7 +19,7 @@ async function main() {
       },
       // Prompt for shape selection
       {
-        type: "list", // Use "list" type instead of "input"
+        type: "list",
         name: "shapeSelection",
         message: "Select a shape (Triangle, Square, Circle):",
         choices: ["Triangle", "Circle", "Square"],
@@ -36,7 +34,7 @@ async function main() {
 
     // Create an instance of the selected shape class
     let shape;
-    switch (answers.shapeSelection) { // Access shapeSelection from answers object
+    switch (answers.shapeSelection) {
       case "Triangle":
         shape = new Triangle();
         break;
@@ -51,14 +49,14 @@ async function main() {
         return;
     }
 
-    shape.setTextColor(answers.textColor); // Access textColor from answers object
-    shape.setShapeColor(answers.shapeColor); // Access shapeColor from answers object
+    // shape.setTextColor(answers.textColor);
+    // shape.setShapeColor(answers.shapeColor);
 
-    const logo = new Logo();
-    logo.setText(answers.text);
-    logo.setTextColor(answers.textColor);
-    logo.setShape(answers.shapeSelection);
-    logo.setShapeColor(answers.shapeColor);
+    const newLogo = new Logo();
+    newLogo.setText(answers.text);
+    newLogo.setTextColor(answers.textColor);
+    newLogo.setShape(answers.shapeSelection);
+    newLogo.setShapeColor(answers.shapeColor);
 
     // Do something with the shape instance
     console.log(shape);
@@ -76,6 +74,4 @@ async function main() {
   }
 }
 
-const logo = new Logo();
 main();
-
