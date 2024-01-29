@@ -43,7 +43,7 @@ Here is an example of the application once the prompts and testing have beem com
 <img width="1368" alt="Screen Shot 2024-01-28 at 9 43 28 PM" src="https://github.com/rickdeakins/SVGlogomaker/assets/141289243/918bcb0d-47de-4462-9cf4-51f17d35fbbe">
 
 ## Links
-Repo: [SVGlogomaker]([https://github.com/rickdeakins/textEditorPWA](https://github.com/rickdeakins/SVGlogomaker))
+Repo: [SVGlogomaker](https://github.com/rickdeakins/SVGlogomaker)
 
 ## Contact
 GitHub: [rickdeakins](https://github.com/rickdeakins)
